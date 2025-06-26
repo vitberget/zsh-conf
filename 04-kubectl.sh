@@ -1,6 +1,4 @@
 alias kc='kubectl'
-alias kube-docker='export KUBECONFIG=~/.kube/docker.yaml; kube-on'
-alias kube-rke2='export KUBECONFIG=~/.kube/rke2.yaml; kube-on'
 
 function kube-namespace() {
     if [ -n "$1" ]; then
