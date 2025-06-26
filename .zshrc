@@ -1,8 +1,11 @@
 autoload -U colors && colors
 
-for e in "${HOME}/.config/zshrc-local.d"/*.sh; do
-    . "${e}"
-done
+if [ -d  "${HOME}/.config/zshrc-local.d" ]; then
+    for e in "${HOME}/.config/zshrc-local.d"/*.sh; do
+        . "${e}"
+    done
+fi
+
 
 for e in "${HOME}/.config/zshrc.d"/*.sh; do
     . "${e}"
@@ -18,8 +21,8 @@ for SOURCE_FILE in $SOURCE_FILES; do
     fi
 done
 
-#if command -v helm >/dev/null 2>&1 ; then
-   # source <(helm completion zsh)
-#fi
+# if command -v helm >/dev/null 2>&1 ; then
+# source <(helm completion zsh)
+# fi
 
 # source ~/.i18n
