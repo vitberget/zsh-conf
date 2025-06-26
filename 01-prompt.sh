@@ -37,8 +37,9 @@ function zsh-prompt-user() {
 }
 
 function zsh-prompt-hostname() {
+
     if [[ $SSH_CLIENT ]]; then
-        echo "%F{214}💻%F{249}%m "
+        echo "%F{214}💻%F{${PROMPT_HOSTNAME_COLOR:=249}}%m "
     fi
 }
 
