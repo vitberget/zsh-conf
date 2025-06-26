@@ -1,5 +1,6 @@
 path=(
     "$HOME/bin"
+    "$HOME/.local/share/bob/nvim-bin"
     "$HOME/.local/bin"
     "$HOME/.cargo/bin"
     "$HOME/.ghcup/bin"
