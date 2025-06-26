@@ -1,0 +1,4 @@
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.cache/zsh-history
+setopt HIST_IGNORE_SPACE
