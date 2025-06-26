@@ -10,6 +10,7 @@ done
 
 SOURCE_FILES=(
     /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+    /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 )
 for SOURCE_FILE in $SOURCE_FILES; do
     if [ -f $SOURCE_FILE ]; then 
