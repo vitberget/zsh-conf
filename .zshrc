@@ -1,4 +1,5 @@
 autoload -U colors && colors
+autoload -U add-zsh-hook
 
 if [ -d  "${HOME}/.config/zshrc-local.d" ]; then
     for e in "${HOME}/.config/zshrc-local.d"/*.sh; do
