@@ -56,7 +56,7 @@ function zsh-prompt-cpath() {
 function zsh-prompt-ins-norm-mode() {
     case $KEYMAP in
         vicmd) echo "%F{214}%B+ %b";;
-        *) echo "%F{251}%B\u00BB %b";;
+        *) echo "%F{#AAAAAA}%B\u00BB %b";;
     esac
 }
 
