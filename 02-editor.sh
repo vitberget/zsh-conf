@@ -1,5 +1,5 @@
-export VISUAL=/usr/bin/nvim
-export EDITOR=/usr/bin/nvim
+export VISUAL=nvim
+export EDITOR=nvim
 
 alias v='nvim'
 alias n='nvim'
