@@ -28,6 +28,13 @@ function venv-prompt() {
     fi
 }
 
+function yocto-prompt() {
+    if [[ ! -z "$BBPATH" ]]; then
+        YOCTO_NAME=$(basename $(dirname $BBPATH))
+        echo -n " %F{144}%{\x1b[3m%}$YOCTO_NAME%{\x1b[0m%}"
+    fi
+}
+
 function zsh-prompt-user() {
     if [ "$(whoami)" = "root" ]; then
         echo "%F{red}%B%n%b"
@@ -92,7 +99,7 @@ function zsh-right-prompt() {
     fi
 }
 function zsh-prompt() {
-    PROMPT="$(zsh-prompt-hostname)$(zsh-tmux)$(zsh-prompt-user) $(zsh-prompt-kube)$(git-prompt-prompt)$(zsh-exit-status)$(zsh-prompt-cpath)$(venv-prompt)"$'\n'"$(zsh-prompt-ins-norm-mode)"
+    PROMPT="$(zsh-prompt-hostname)$(zsh-tmux)$(zsh-prompt-user) $(zsh-prompt-kube)$(git-prompt-prompt)$(zsh-exit-status)$(zsh-prompt-cpath)$(venv-prompt)$(yocto-prompt)"$'\n'"$(zsh-prompt-ins-norm-mode)"
 }
 
 function zsh-prompt-reset-cursor() {
