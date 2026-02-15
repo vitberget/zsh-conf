@@ -83,6 +83,7 @@ kube-on() {
 }
 kube-off() {
     unset KUBE_PROMPT_ON
+    unset KUBECONFIG
 }
 
 ZLE_RPROMPT_INDENT=0
