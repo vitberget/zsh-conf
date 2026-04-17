@@ -1,7 +1,1 @@
 alias less='less -R'
-# alias sss='sudo -E su'
-# alias svim='sudo -E vim'
-# alias xsudo='sudo XAUTHORITY=/home/$(whoami)/.Xauthority'
-# alias psgrep='ps aux |grep -v grep | grep --color=auto '
-# alias :q='exit'
-# alias tmux-new='tmux new-session -s '

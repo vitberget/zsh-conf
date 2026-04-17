@@ -7,7 +7,6 @@ if [ -d  "${HOME}/.config/zshrc-local.d" ]; then
     done
 fi
 
-
 for e in "${HOME}/.config/zshrc.d"/*.sh; do
     . "${e}"
 done
@@ -21,9 +20,3 @@ for SOURCE_FILE in $SOURCE_FILES; do
         source $SOURCE_FILE
     fi
 done
-
-# if command -v helm >/dev/null 2>&1 ; then
-# source <(helm completion zsh)
-# fi
-
-# source ~/.i18n
