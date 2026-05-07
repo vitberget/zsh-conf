@@ -11,3 +11,5 @@ function kube-namespace() {
 
 alias kc='kubectl'
 alias kc-namespace=kube-namespace
+alias kube-ns=kube-namespace
+alias kc-ns=kube-namespace
