@@ -70,12 +70,18 @@ function zsh-prompt-ins-norm-mode() {
 function zsh-prompt-kube() {
     if [ -v KUBE_PROMPT_ON ]; then
         KUBE_PROMPT_CONTEXT=$(kubectl config current-context 2>/dev/null)
-        KUBE_PROMPT_NAMESPACE=$(kubectl config view --minify --output 'jsonpath={..namespace}')
 
         echo -n "%F{27}⎈ "
         echo -n "%F{99}${KUBE_PROMPT_CONTEXT}"
-        echo -n "%F{8}:"
-        echo -n "%F{218}${KUBE_PROMPT_NAMESPACE} "
+
+        if [[ -v KUBE_NS ]]; then
+            echo -n "%F{8}:"
+            echo -n "%F{218}${KUBE_NS} "
+        else
+            KUBE_PROMPT_NAMESPACE=$(kubectl config view --minify --output 'jsonpath={..namespace}')
+            echo -n "%F{8}:"
+            echo -n "%F{218}${KUBE_PROMPT_NAMESPACE} "
+        fi
     fi
 }
 kube-on() {
