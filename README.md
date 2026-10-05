@@ -7,6 +7,13 @@ git clone <this repo> ~/.config/zshrc.d
 ln -s ~/.config/zshrc.d/.zshrc ~/ # or cp
 ```
 
+### Debian
+
+```sh
+sudo apt install zsh zsh-syntax-highlighting
+chsh -s /bin/zsh
+```
+
 ## ssh hostname color
 
 ```sh
