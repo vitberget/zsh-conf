@@ -11,6 +11,7 @@ ln -s ~/.config/zshrc.d/.zshrc ~/ # or cp
 
 ```sh
 # set env variable example
+mkdir -p ~/.config/zshrc-local.d
 echo PROMPT_HOSTNAME_COLOR=196 > ~/.config/zshrc-local.d/01-prompt-hostname-color.sh
 ```
 
